@@ -26,11 +26,12 @@ public class loginServlet extends HttpServlet {
         List<Usuario> usuarios = usuarioService.findAll( );
         List<Rol> roles = rolService.findAll( );
         boolean verify = false;
-
+        Usuario currentUser = new Usuario();
         for (Usuario usuario : usuarios) {
             System.out.println("hola");
             if (nombre.equals(usuario.getNombre()) && password.equals(usuario.getPassword())){
                 verify = true;
+                currentUser = usuario;
             }else{
                 System.out.println("");
                 System.out.println(usuario.getNombre());
@@ -38,7 +39,7 @@ public class loginServlet extends HttpServlet {
             }
         }
         if (verify){
-
+            System.out.println(currentUser.getRol_id());
             resp.sendRedirect("Alumnos.jsp");
         }
 

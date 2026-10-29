@@ -23,6 +23,11 @@ public class Usuario {
 
     @Column(name = "PASSWORD")
     private String password;
+
+    @Column(name = "ROL_ID")
+    private String rol_id;
+
+
 }
 
 
