@@ -16,6 +16,7 @@
         <mapping class="org.gerdoc.model.Alumno"/>
         <mapping class="org.gerdoc.model.Profesor"/>
         <mapping class="org.gerdoc.model.Materia"/>
+        <mapping class="org.gerdoc.model.Usuario"/>
         <mapping class="org.gerdoc.model.ProfesorMateria"/>
     </session-factory>
 </hibernate-configuration>
